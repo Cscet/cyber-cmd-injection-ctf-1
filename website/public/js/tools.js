@@ -11,7 +11,7 @@ function createMasterSuccessAlert(flag) {
     alert.append(heading);
 
     let message = document.createElement('p');
-    message.classList.add('fsw-italic')
+    message.classList.add('fst-italic')
     message.innerHTML = flag
     alert.append(message);
     return alert;
