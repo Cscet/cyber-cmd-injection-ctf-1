@@ -1,0 +1,63 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block content %}
+    <div class="row mt-5">
+        <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+            {% if success is not null %}
+                {% if success == true %}
+                <div class="alert alert-success mb-3" role="alert" id="cft-1-success">
+                    <h4 class="alert-heading">Success</h4>
+                    <p ><b>Flag: </b><em id="flag">{{ flag }}</em></p>
+                    <a href="" class="btn btn-outline-success">Next Level</a>
+                </div>
+                {% else %}
+                <div class="alert alert-danger mb-3" role="alert" id="cft-1-failed">
+                    <h4 class="alert-heading">Failed</h4>
+                    <p><b>Try again</b></p>
+                </div>
+                {% endif %}
+            {% endif %}
+            <div class="card">
+                <div class="card-header">
+                    <h5>Ctf 1</h5>
+                </div>
+                <div class="card-body">
+                    <h5>Enoncé</h5>
+                    <p>Afficher le contenu du dossier <code>/badges-credentials</code> situé dans le dossier <code>/tmp</code></p>
+                    <hr/>
+                    <form method="post" action="/ctfs/1">
+                        <div class="row">
+                            <div class="col-md-9 col-sm-10">
+                                <input type="text" class="form-control" id="cmd" name="cmd" aria-describedby="ipAddressHelp" placeholder="Enter a command">
+                            </div>
+                            <div class="col-md-3 col-sm-2" >
+                                <button type="submit" name="submit" class="btn btn-primary">Execute</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer d-flex justify-content-center">
+                    <a class="btn btn-danger" href="/">Back</a>
+                </div>
+            </div>
+            {% if output is not null %}
+                <div class="alert alert-info mt-3" role="alert">
+                    <h4 class="alert-heading">Result</h4>
+                    <p><b>Command: </b>{{ cmd }}</p>
+                    <ul>
+                        {% for line in output %}
+                            <li>{{ line }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascript %}
+    <script type="module" src="/js/ctf-1.js"></script>
+{% endblock %}

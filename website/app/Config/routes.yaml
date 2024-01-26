@@ -2,6 +2,10 @@ index:
     uri: /
     controller: Controller\HomeController
     httpMethod: [GET]
+ctf-1:
+    uri: /ctfs/1
+    controller: Controller\Ctfs\Ctf1Controller
+    httpMethod: [GET,POST]
 testdb:
     uri: /testdb
     controller: Controller\DataBaseTestController
