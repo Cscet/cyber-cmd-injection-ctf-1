@@ -17,6 +17,8 @@ RUN apt-get update \
      net-tools\
      iputils-ping\
      curl\
+     zip \
+     unzip \
      python3\
      python3-pip\
      python3-cryptography

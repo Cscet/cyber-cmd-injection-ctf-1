@@ -21,13 +21,18 @@
             {% endif %}
             <div class="card">
                 <div class="card-header">
-                    <h5>Ctf 2</h5>
+                    <h5>Ctf 3</h5>
                 </div>
                 <div class="card-body">
                     <h5>Enoncé</h5>
-                    <p>Afficher le contenu du fichier <code>flag.txt</code> situé dans le dossier <code>/tmp/guessing</code></p>
+                    <p>Afficher le contenu du fichier <code>flag.txt</code> contenu dans le dossier compressé situé dans le dossier <code>/tmp/archives</code></p>
+                    <p>Il semble que ce dossier compressé soit protégé par un mot de passe, mais un fichier <code>guess.txt</code> situé dans le même dossier pourra vous aider.</p>
+                    <div class="alert alert-info" role="alert">
+                        <p><b>Hint: </b>Utilisez la commande <code>unzip</code> pour décompresser le dossier</p>
+                        <p><b>Exemple: </b><code>unzip -P password mondossier.zip -d dossier-de-destination</code></p>
+                    </div>
                     <hr/>
-                    <form method="post" action="/ctfs/2">
+                    <form method="post" action="/ctfs/3">
                         <div class="row">
                             <div class="col-md-9 col-sm-10">
                                 <input type="text" class="form-control" id="cmd" name="cmd" placeholder="Enter a command">
@@ -39,7 +44,7 @@
                     </form>
                     {% if showAnswerForm %}
                         <hr/>
-                        <form method="post" action="/ctfs/2" id="form-answer">
+                        <form method="post" action="/ctfs/3" id="form-answer">
                             <p>Entrez la réponse à la question posée dans le fichier</p>
                             <div class="row">
                                 <div class="col-md-9 col-sm-10">
@@ -73,5 +78,5 @@
 
 {% endblock %}
 {% block javascript %}
-    <script type="module" src="/js/ctf-2.js"></script>
+    <script type="module" src="/js/ctf-3.js"></script>
 {% endblock %}

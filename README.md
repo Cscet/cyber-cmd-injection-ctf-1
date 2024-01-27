@@ -16,7 +16,7 @@ Ce projet propose :
 
 ## liste des challenges
  <!--- - lister le contenu du dossier courant avec la commande `ls -al` -->
- - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt`
+ <!--- - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt` -->
  - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt` en utilisant la commande `grep`
  - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt` en utilisant la commande `tar`
  - Passer en root et créer un nouvel utilisateur 'admin' avec le mot de passe 'admin' avec la commande `sudo su` et `useradd admin`
