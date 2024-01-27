@@ -27,6 +27,16 @@ function getDataFromStorage(){
                 level: 1,
                 success: null,
                 flag: null
+            },
+            {
+                level: 2,
+                success: null,
+                flag: null
+            },
+            {
+                level: 3,
+                success: null,
+                flag: null
             }
         ]
 }
@@ -54,10 +64,11 @@ function checkCompletion(){
     return data.every((level) => level.success === true)
 }
 
+
 export default {
     getDataFromStorage,
-    updateLevelProgression,
     resetProgression,
     checkCompletion,
+    updateLevelProgression,
     createMasterSuccessAlert
 }

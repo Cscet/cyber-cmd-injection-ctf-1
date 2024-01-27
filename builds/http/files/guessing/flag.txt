@@ -1,0 +1,3 @@
+#GUESS 1
+
+What ensures the definition of privileges for a user account, authentication or authorization ?

@@ -1,9 +1,9 @@
 import Tools from './tools.js';
 
-if(document.querySelector('#cft-1-success')) {
+if(document.querySelector('#ctf-success')) {
     Tools.updateLevelProgression(1, true, document.querySelector('#flag').textContent);
 }
 
-if(document.querySelector('#cft-1-failed')) {
+if(document.querySelector('#ctf-failed')) {
     Tools.updateLevelProgression(1, false, null);
 }

@@ -6,6 +6,10 @@ ctf-1:
     uri: /ctfs/1
     controller: Controller\Ctfs\Ctf1Controller
     httpMethod: [GET,POST]
+ctf-2:
+    uri: /ctfs/2
+    controller: Controller\Ctfs\Ctf2Controller
+    httpMethod: [GET,POST]
 testdb:
     uri: /testdb
     controller: Controller\DataBaseTestController

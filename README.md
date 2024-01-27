@@ -15,7 +15,7 @@ Ce projet propose :
 - l'application web disponible à l'adresse `http://localhost:8000`
 
 ## liste des challenges
- - lister le contenu du dossier courant avec la commande `ls -al`
+ <!--- - lister le contenu du dossier courant avec la commande `ls -al` -->
  - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt`
  - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt` en utilisant la commande `grep`
  - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt` en utilisant la commande `tar`

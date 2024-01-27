@@ -10,7 +10,7 @@
                 <div class="alert alert-success mb-3" role="alert" id="ctf-success">
                     <h4 class="alert-heading">Success</h4>
                     <p ><b>Flag: </b><em id="flag">{{ flag }}</em></p>
-                    <a href="/ctfs/2" class="btn btn-outline-success">Next Level</a>
+                    <a href="/ctfs/3" class="btn btn-outline-success">Next Level</a>
                 </div>
                 {% else %}
                 <div class="alert alert-danger mb-3" role="alert" id="ctf-failed">
@@ -21,19 +21,31 @@
             {% endif %}
             <div class="card">
                 <div class="card-header">
-                    <h5>Ctf 1</h5>
+                    <h5>Ctf 2</h5>
                 </div>
                 <div class="card-body">
                     <h5>Enoncé</h5>
-                    <p>Afficher le contenu du dossier <code>/badges-credentials</code> situé dans le dossier <code>/tmp</code></p>
+                    <p>Afficher le contenu du fichier <code>flag.txt</code> situé dans le dossier <code>/tmp/guessing</code></p>
                     <hr/>
-                    <form method="post" action="/ctfs/1">
+                    <form method="post" action="/ctfs/2">
                         <div class="row">
                             <div class="col-md-9 col-sm-10">
-                                <input type="text" class="form-control" id="cmd" name="cmd" aria-describedby="ipAddressHelp" placeholder="Enter a command">
+                                <input type="text" class="form-control" id="cmd" name="cmd" placeholder="Enter a command">
                             </div>
                             <div class="col-md-3 col-sm-2" >
-                                <button type="submit" name="submit" class="btn btn-primary">Execute</button>
+                                <button type="submit" name="submit-cmd" class="btn btn-primary">Execute</button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr/>
+                    <form method="post" action="/ctfs/2" id="form-answer" class="d-none">
+                        <p>Entrez la réponse à la question posée dans le fichier</p>
+                        <div class="row">
+                            <div class="col-md-9 col-sm-10">
+                                <input type="text" class="form-control" id="answer" name="answer" placeholder="Type your answer">
+                            </div>
+                            <div class="col-md-3 col-sm-2" >
+                                <button type="submit" name="submit-answer" class="btn btn-primary">check</button>
                             </div>
                         </div>
                     </form>
@@ -59,5 +71,5 @@
 
 {% endblock %}
 {% block javascript %}
-    <script type="module" src="/js/ctf-1.js"></script>
+    <script type="module" src="/js/ctf-2.js"></script>
 {% endblock %}
