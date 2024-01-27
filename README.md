@@ -15,11 +15,9 @@ Ce projet propose :
 - l'application web disponible à l'adresse `http://localhost:8000`
 
 ## liste des challenges
- <!--- - lister le contenu du dossier courant avec la commande `ls -al` -->
- <!--- - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt` -->
- - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt` en utilisant la commande `grep`
- - visualiser le contenu du fichier `flag.txt` avec la commande `cat flag.txt` en utilisant la commande `tar`
- - Passer en root et créer un nouvel utilisateur 'admin' avec le mot de passe 'admin' avec la commande `sudo su` et `useradd admin`
+ - lister un dossier
+ - lire un fichier
+ - decompresser un dossier et lire un fichier
+ - compresser et download des fichiers
  - uploader un fichier avec la commande `curl` et l'option `-F`
- - visualiser la liste des users avec la commande `cat /etc/passwd`
  - ajouter du contenu a un fichier avec la commande `echo` et l'option `>>`
